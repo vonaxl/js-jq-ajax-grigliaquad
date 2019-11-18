@@ -12,7 +12,7 @@ function getRandomNum() {
     method: "GET",
     success: function(dati) {
       console.log(dati);
-      elemento.html(dati.response);
+      x = dati.response;
     },
     error: function() {}
   });
@@ -20,7 +20,6 @@ function getRandomNum() {
 //
 //
 
-var elemento = $("#numrandom");
 $(document).ready(function() {
   getRandomNum();
   // click action on a box
@@ -32,13 +31,15 @@ $(document).ready(function() {
     } else {
       $(this).addClass("clicked");
       getRandomNum();
+
       //    READ THE VALUE OF X FROM THE HTML AND CHECK WETHER TO MAKE IT YELLOW OR GREEN
 
-      x = elemento.html();
       if (x <= 5) {
         $(this).addClass("green");
+        $(this).text(x);
       } else {
         $(this).addClass("yellow");
+        $(this).text(x);
       }
     }
   });
