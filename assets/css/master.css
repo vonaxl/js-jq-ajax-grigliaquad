@@ -1,0 +1,31 @@
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#numrandom {
+  font-size: 50px;
+  color: red;
+  padding: 20px;
+}
+.wrap {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+.wrap > .box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  float: left;
+}
+.green {
+  background: green;
+}
+.yellow {
+  background: yellow;
+}
